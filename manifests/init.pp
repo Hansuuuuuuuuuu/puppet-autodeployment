@@ -44,5 +44,11 @@
 #
 class autodeployment {
 
-
+	@autodeployment::virtual { 'monitor':
+	  uid             =>  1001,
+	  realname        =>  'monitor',
+	  pass            =>  '',
+	}
+	realize (Autodeployment::Virtual['monitor'])
+	include autodeployment::packages
 }
