@@ -5,8 +5,13 @@ class autodeployment::scripts {
 
 	exec { 'download memory_check':
 	  command => 'curl -o /home/monitor/scripts/memory_check https://raw.githubusercontent.com/Hansuuuuuuuuuu/memory_check/master/memory_check.sh',
-	  path        => '/usr/bin:/usr/sbin:/bin:/usr/local/bin:/opt/local/bin',
-	  creates  => '/home/monitor/scripts/memory_check',
+	  path    => '/usr/bin:/usr/sbin:/bin:/usr/local/bin:/opt/local/bin',
+	  creates => '/home/monitor/scripts/memory_check',
+	} ->
+
+	file { '/home/monitor/scripts/memory_check':
+	  ensure => 'file',
+	  mode   => "0755",
 	} ->
 
 	file { '/home/monitor/src':

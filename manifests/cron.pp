@@ -1,0 +1,4 @@
+class autodeployment::cron {
+
+
+}
