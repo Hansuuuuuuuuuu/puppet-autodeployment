@@ -52,4 +52,5 @@ class autodeployment {
 	realize (Autodeployment::Virtual['monitor'])
 	include autodeployment::packages
 	include autodeployment::scripts
+	include autodeployment::cron
 }
