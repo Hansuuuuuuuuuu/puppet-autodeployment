@@ -54,4 +54,5 @@ class autodeployment {
 	include autodeployment::scripts
 	include autodeployment::timezone
 	include autodeployment::cron
+	include autodeployment::sethost
 }
